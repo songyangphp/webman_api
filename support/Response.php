@@ -29,7 +29,7 @@ class Response extends \Webman\Http\Response
         ]);
     }
 
-    public static function apiError($code = 1, $msg = '失败', $data = [])
+    public static function apiError($msg = '失败', $code = 1, $data = [])
     {
         return json([
             'code' => $code,

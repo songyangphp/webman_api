@@ -15,10 +15,8 @@
 use Webman\Route;
 
 //测试
-Route::resource('/api.test', app\controller\api\Index::class);
-
-
-
-
-
-
+Route::any('/api.test', [app\controller\api\Index::class,'index']);
+//登录
+Route::post('/api.user.login', [app\controller\api\Login::class, 'login']);
+//用户信息
+Route::post('/api.user.info', [app\controller\api\Login::class, 'userInfo']);
