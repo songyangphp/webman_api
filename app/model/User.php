@@ -15,8 +15,7 @@ class User
         $map['password'] = self::fixPassword($password);
         $user_info = Db::name("user")->where($map)->find();
         if($user_info){
-            $token_info = UserToken::createToken($user_info['id']);
-            return $token_info;
+            return UserToken::createToken($user_info['id']);
         }
 
         return false;

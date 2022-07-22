@@ -9,20 +9,7 @@ class UserToken
     public static function checkToken($token)
     {
         $uid = self::getField($token);
-        if($uid){
-//todo 将此处注释打开 可以支持动态token 但是还需要自己改良一下
-//            $_token = self::createToken($user_info['uid']);
-//            if($_token === false){
-//                return false;
-//            }
-//            return [
-//                "uid" => $user_info['uid'],
-//                "token" => $_token
-//            ];
-//            return $user_info['uid'];
-            return $uid;
-        }
-        return false;
+        return $uid === false ? false : $uid;
     }
 
     public static function getField($token)
