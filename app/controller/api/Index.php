@@ -11,7 +11,7 @@ class Index
 
     public function index(Request $request)
     {
-        //示例
+        //示例 这是devlocal的分支
         $user_list = Db::name("user")->select();
         return Response::apiSuccess($user_list);
     }
