@@ -8,6 +8,7 @@ use think\facade\Db;
 
 class Index
 {
+
     public function index(Request $request)
     {
         //示例
